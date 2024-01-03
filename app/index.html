@@ -11,27 +11,27 @@
         <link rel="shortcut icon" href="../assets/images/logo.svg"
             type="image/x-icon">
     </head>
-    <body class="full-screen">
-        <div class="home">
+    <body class="full-screen" >
+        <div class="home" ="displayHomePage()" id="home">
             <div class="logo">
                 <img src="../assets/images/logo.svg" alt />
                 <span>Myoran</span>
             </div>
             <div class="bottom-bar">
-                <button class="btn-sign-in">
+                <button class="btn-sign-in" onclick="displayPage('login')">
                     <span></span><span></span><span></span><span></span>
                     Sign in
                 </button>
-                <button class="btn-sign-up">
+                <button class="btn-sign-up" onclick="displayPage('sign-up')">
                     <span></span><span></span><span></span><span></span>
                     sign up
                 </button>
             </div>
         </div>
-        <div class="login">
-            <form action="#" class="form-login">
+        <div class="login" id="login">
+            <form action="#" class="form-login auth-form">
                 <h2>Sign in to continue</h2>
-                <div class="logo">
+                <div class="logo" onclick="displayPage('home')">
                     <img src="../assets/images/logo.svg">
                 </div>
                 <div class="form-group">
@@ -43,8 +43,33 @@
                     <input id="password" type="password" required />
                 </div>
                 <button type="submit">Sign in</button>
+                <span class="terms-parivacy"><a href="#" style="text-decoration: none;" onclick="displayPage('sign-up')">Don't have an account? Sign Up</a></span>
                 <span href="#" class="terms-parivacy"><a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></span>
             </form>
         </div>
+
+        <div class="sign-up" id="sign-up">
+            <form action="#" class="form-sign-up auth-form">
+                <h2>Sign up to continue</h2>
+                <div class="logo" onclick="displayPage('home')">
+                    <img src="../assets/images/logo.svg">
+                </div>
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input id="name" type="text" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password  <a onclick="displayPage('login')">Already have account?</a></label>
+                    <input id="password" type="password" required />
+                </div>
+                <button type="submit">Sign up</button>
+                <span class="terms-parivacy"><a>Terms and Conditions</a> | <a>Privacy Policy</a></span>
+            </form>
+        </div>
+        <script src="../assets/js/home.js"></script>
     </body>
 </html>

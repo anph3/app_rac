@@ -24,8 +24,8 @@ body {
 }
 /* Home tab */
 .home{
-    display: none;
-    /* display: contents; */
+    /* display: none; */
+    display: contents;
 }
   
 .logo{

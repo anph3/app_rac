@@ -1,29 +1,30 @@
-.login {
+.login, .sign-up {
     background: var(--bg-light);
     margin: 0rem 1.5rem;
     padding: 1.5rem;
     width: 100%;
     border-radius: 1.2rem;
+    display: none;
 }
 
-.login>form {
+.auth-form {
     padding-bottom: 3rem;
     padding-top: 1rem;
 }
 
-.form-login>.logo {
+.auth-form>.logo {
     margin: 1rem;
 }
 
-.form-login>h2 {
+.auth-form>h2 {
     font-size: 1.5rem;
     text-shadow: var(--text-shadow);
     text-align: center;
 }
 
-.form-login>input {}
+.auth-form>input {}
 
-.form-login label>a {
+.auth-form label>a {
     text-decoration: none;
     font-size: 0.8rem;
     font-style: normal;
@@ -31,7 +32,7 @@
     color: var(--text-dark);
 }
 
-.form-login>button {
+.auth-form>button {
     background-color: var(--btn-color);
     width: 100%;
     text-transform: uppercase;
