@@ -39,7 +39,7 @@
                     <input id="email" type="text" required />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password  <a href="#">Forgot Password?</a></label>
+                    <label for="password">Password  <a href="#" onclick="displayPage('forgot-password')">Forgot Password?</a></label>
                     <input id="password" type="password" required />
                 </div>
                 <button type="submit">Sign in</button>
@@ -68,6 +68,47 @@
                 </div>
                 <button type="submit">Sign up</button>
                 <span class="terms-parivacy"><a>Terms and Conditions</a> | <a>Privacy Policy</a></span>
+            </form>
+        </div>
+        <div class="forgot-password" id="forgot-password">
+            <form action="#" class="form-forgot-password auth-form">
+                <h2>Sign up to continue</h2>
+                <div class="logo" onclick="displayPage('home')">
+                    <img src="../assets/images/logo.svg">
+                </div>
+                <div class="form-description">
+                    Enter your email to receive a confirmation code and retrieve your password
+                </div>
+                <div class="form-group">
+                    <label for="email-forgot">Email</label>
+                    <input id="email-forgot" type="text" required />
+                </div>
+                <button type="submit" onclick="displayPage('otp')">Comfirm</button>
+                <span class="terms-parivacy"><a>You need help?</a></span>
+            </form>
+        </div>
+        <div class="otp" id="otp">
+            <form action="#" class="form-otp auth-form" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                <h2>OTP</h2>
+                <div class="logo" onclick="displayPage('home')">
+                    <img src="../assets/images/logo.svg">
+                </div>
+                <div class="form-description">
+                    Enter the code in your mail
+                </div>
+                <div class="digit-group">
+                    <input required type="number" id="digit-1" name="digit-1" data-next="digit-2"/>
+                    <input required disabled type="number" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1"/>
+                    <input required disabled type="number" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2"/>
+                    <input required disabled type="number" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3"/>
+                    <input required disabled type="number" id="digit-5" name="digit-5" data-next="digit-6" data-previous="digit-4"/>
+                    <input required disabled type="number" id="digit-6" name="digit-6" data-previous="digit-5"/>
+                </div>
+                <div class="form-description">
+                    <a href="#">Code not received? resend</a>
+                </div>
+                <button type="submit">Comfirm</button>
+                <span class="terms-parivacy"><a>You need help?</a></span>
             </form>
         </div>
         <script src="../assets/js/home.js"></script>
